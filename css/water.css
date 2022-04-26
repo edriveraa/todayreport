@@ -1,0 +1,159 @@
+body {
+			margin : 0;
+			background-image: linear-gradient(#33B5FF, #33B5FF, #33B5FF, #33F3FF, #33F3FF, #33FFC7, #6CE1FB , #6CCEFB , #6CA7FB );
+		}
+		h1 {
+			color: white;
+			background-image: linear-gradient(#3393FF, #33B8FF, #33E6FF, #33FFF6, #33FFBE);
+			box-shadow: 0 0 10px #ffe808, 0 0 40px #ffe808, 0 0 80px #ffe808;
+			-webkit-box-shadow: 0 0 10px #33FFB2, 0 0 40px #33E6FF, 0 0 80px #ffe808;
+    		-moz-box-shadow: 0 0 10px #ffe808, 0 0 40px #ffe808, 0 0 80px #ffe808;
+			width: auto;
+			border-radius: 25px;
+			text-align: center;
+			font-size: 35px;
+			padding: 10px;
+			font-family: 'Harukaze';
+			font-size: 100px;
+		}
+		p {
+			color: white;
+			text-indent: 50px;
+			font-family: 'Dekiru'; 
+		}
+		#card {
+			background-image: linear-gradient(#33B5FF, #339FFF, #337DFF, #335BFF, #4633FF);
+			margin: 50px;
+			padding: 30px;
+			position: relative;
+			opacity: 0.8;
+			border-radius: 35px;
+		}
+		.container {
+			background-image: url(img/Water_Breathing.png);
+			border-radius: 50px;
+			background-repeat: no-repeat;
+  			background-attachment: fixed;
+  			background-position: center; 
+  			background-size: cover;
+  			margin: 40px;
+  			padding: 20px;
+		}
+		canvas {
+			position: relative;
+			background-color: transparent;
+      opacity: 0;
+		}
+		@font-face{
+    		font-family: 'Harukaze';
+    		src: url('Harukaze.ttf');
+		}
+		@font-face{
+    font-family: 'Dekiru';
+    src: url('Dekiru.ttf');
+}
+
+a {
+	font-family: 'Dekiru';
+}
+
+
+.radial{
+
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.radial ul{
+   list-style: none; 
+}
+
+.radial  ul  li  a{
+  
+  border-radius: 33px;
+
+  text-align: center;
+  height: 60px;
+  line-height: 58px;
+  color: white;
+  width: 60px;
+  background: #33E6FF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  box-shadow: 2px 3px 5px black;
+  text-decoration: none;
+  z-index: 1;
+  
+  -webkit-transition: top .5s ease, left .5s ease, opacity .5s ease;
+}
+
+.radial ul li > div{
+   position: absolute; 
+}
+
+
+.radial ul li a:hover{
+   background: #3383FF;
+   border: 2px #4633FF;
+   box-shadow: 0 0 10px #33E6FF, 0 0 40px #33E6FF, 0 0 80px #33E6FF;
+			-webkit-box-shadow: 0 0 10px #33E6FF, 0 0 40px #33E6FF, 0 0 80px #33E6FF;
+    		-moz-box-shadow: 0 0 10px #33E6FF, 0 0 40px #33E6FF, 0 0 80px #33E6FF;
+
+}
+
+.radial ul.paused li a{
+  opacity: 1;
+
+}
+
+.radial ul.paused > li div ul li a{
+  opacity: 0;
+   -webkit-transition: top .5s ease, left .5s ease, opacity .5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  background: lightBlue;
+
+}
+
+.radial ul.paused > li div ul li a:hover{
+  background: darkBlue;
+  
+} 
+  
+.radial ul.paused > li:hover > div > ul a{
+  opacity: 1;
+  display: block;
+}
+
+
+
+/*This needs work to fade out others*/
+.radial > ul.paused > li > a:not(:hover){
+  opacity: .7;
+}
+
+#img1 {
+  opacity: 0;
+}
+
+
+.drop {
+    background-image: linear-gradient(transparent, white);
+    width: 1px;
+    height: 89px;
+    position: absolute;
+    bottom: 200px;
+    -webkit-animation: fall .63s linear infinite;
+    -moz-animation: fall .63s linear infinite;
+   }
+   
+   @-webkit-keyframes fall { to {margin-top: 900px;}}
+   @-moz-keyframes fall { to {margin-top: 900px;}}
